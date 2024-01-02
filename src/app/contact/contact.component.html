@@ -1,0 +1,83 @@
+<!-- contact section design -->
+<section class="contact" data-aos="fade-up" id="contact">
+  <div class="logo-wrapper">
+    <img src="././assets/logo_black_footer.png" alt="" />
+    <span class="company-description">kontakt</span>
+  </div>
+
+  <div class="line-wrapper">
+    <div class="line"></div>
+  </div>
+
+<form (ngSubmit)="sendMail()" #myForm>
+  <div class="input-box">
+    <div class="input-field">
+      <input type="text" class="input"  #nameField placeholder="vor- und nachname" formControlName="name" required [class.invalid]="
+        registerForm.get('name')?.invalid &&
+        (registerForm.get('name')?.dirty ||
+        registerForm.get('name')?.touched ||
+        isSubmitted)" />
+      <span class="focus"></span>
+      <span
+        *ngIf="registerForm.get('name')?.hasError('required') && (registerForm.get('name')?.dirty || registerForm.get('name')?.touched || isSubmitted)"
+        class="error">This field is required.</span>
+    </div>
+    <div class="input-field">
+      <input type="text" class="input" #emailField placeholder="e-mail" formControlName="email" required [class.invalid]="
+        registerForm.get('email')?.invalid &&
+        (registerForm.get('email')?.dirty ||
+        registerForm.get('email')?.touched ||
+        isSubmitted)" />
+      <span class="focus"></span>
+      <span
+        *ngIf="registerForm.get('email')?.hasError('required') && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched || isSubmitted)"
+        class="error">This field is required.</span>
+      <span
+        *ngIf="registerForm.get('email')?.hasError('email') && !registerForm.get('email')?.hasError('required') && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched || isSubmitted)"
+        class="error">Invalid email address.</span>
+    </div>
+  </div>
+
+  <div class="input-box">
+    <div class="input-field" style="width: 100%">
+      <input type="text" class="input"  #emailSubjectField placeholder="fachrichtung" formControlName="emailSubject" required
+        [class.invalid]="
+        registerForm.get('emailSubject')?.invalid &&
+        (registerForm.get('emailSubject')?.dirty ||
+        registerForm.get('emailSubject')?.touched ||
+        isSubmitted)" />
+      <span class="focus"></span>
+      <span
+        *ngIf="registerForm.get('emailSubject')?.hasError('required') && (registerForm.get('emailSubject')?.dirty || registerForm.get('emailSubject')?.touched || isSubmitted)"
+        class="error">This field is required.</span>
+    </div>
+  </div>
+
+
+  <div class="textarea-field">
+    <textarea class="input"  #messageField placeholder="nachricht" formControlName="message" rows="10" required [class.invalid]="
+        registerForm.get('message')?.invalid &&
+        (registerForm.get('message')?.dirty ||
+        registerForm.get('message')?.touched ||
+        isSubmitted)"></textarea>
+    <span class="focus"></span>
+
+  </div>
+  <div>
+      <span *ngIf="
+      registerForm.get('message')?.hasError('required') &&
+      (registerForm.get('message')?.dirty ||
+        registerForm.get('message')?.touched ||
+        isSubmitted)
+    " class="error">This field is required.</span>
+    </div>
+
+  <div class="btn-box btns">
+    <button type="submit" #sendButton class="btn">Nachricht senden</button>
+    <span class="animate scroll" style="--i: 9"></span>
+  </div>
+  <div class="message-box" *ngIf="messageSent">
+    <p>Nachricht erfolgreich gesendet!</p>
+  </div>
+</form>
+</section>

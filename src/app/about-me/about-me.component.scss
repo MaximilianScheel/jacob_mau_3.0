@@ -1,0 +1,327 @@
+section {
+  min-height: 100vh;
+  padding: 13rem 9% 2rem;
+  color: black;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    width: 100px;
+  }
+
+  span {
+    font-size: 1.7rem;
+    color: black;
+
+    padding: 2rem;
+  }
+}
+
+.line-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+
+  .line {
+    border: 0.2rem solid black;
+    width: 75rem;
+  }
+}
+
+.img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12rem;
+
+  img {
+    width: 25rem;
+    padding-left: 2rem;
+  }
+
+  span {
+    color: black;
+    line-height: 2;
+    font-size: 1.7rem;
+  }
+}
+
+.heading {
+  position: relative;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span {
+  color: black;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  position: relative;
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.education .education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education-row .education-column {
+    flex: 1 1 40rem;
+    max-width: 120rem;
+}
+
+.education-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.education-column .education-box {
+    position: relative;
+    border-left: .2rem solid black;
+}
+
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-box .education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: black;
+    border-radius: 50%;
+}
+
+.education-content .content {
+    position: relative;
+    border-radius: .6rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
+}
+
+.education-content .content .year {
+    font-size: 1.5rem;
+    color: black;
+    padding-bottom: .5rem;
+}
+
+.education-content .content .year i {
+    padding-right: .5rem;
+}
+
+.education-content .content h3 {
+    font-size: 2rem;
+}
+
+.education-content .content p {
+    font-size: 1.6rem;
+}
+
+.wrapper-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rem;
+  padding-right: 12rem;
+
+}
+
+
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes homeBgText {
+
+  0%,
+  10%,
+  100% {
+      background-position: -33rem 0;
+  }
+
+  65%,
+  85% {
+      background-position: 0 0;
+  }
+}
+
+@keyframes homeCursorText {
+
+  0%,
+  10%,
+  100% {
+      width: 0;
+  }
+
+  65%,
+  78%,
+  85% {
+      width: 100%;
+      opacity: 1;
+  }
+
+  75%,
+  81% {
+      opacity: 0;
+  }
+}
+
+@keyframes aboutSpinner {
+  100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes showRight {
+  100% {
+      width: 0;
+  }
+}
+
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+  html {
+      font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+      padding: 2rem 4%;
+  }
+
+  section {
+      padding: 10rem 4% 2rem;
+  }
+
+  .home {
+      padding: 0 4%;
+  }
+
+  .footer {
+      padding: 2rem 4%;
+  }
+}
+
+@media (max-width: 850px) {
+  .animate.home-img {
+      width: 55%;
+  }
+
+  .img-wrapper {
+    flex-direction: column;
+    padding-top: 0;
+
+    img {
+      padding-left: 0;
+      padding-top: 7rem;
+    }
+  }
+
+  .wrapper-content {
+    padding-right: 0;
+  }
+
+  .education-box {
+    width: 100%;
+  }
+
+  .description-bio {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+      font-size: 50%;
+  }
+
+  .home-content h1 {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .home-sci {
+      width: 160px;
+  }
+
+  .home-sci a {
+      width: 38px;
+      height: 38px;
+  }
+}
+
+@media (max-width: 462px) {
+  .home-content h1 {
+      font-size: 5.2rem;
+  }
+
+  .education {
+      padding: 10rem 4% 5rem 5%;
+  }
+
+  .contact form .input-box .input-field {
+      width: 100%;
+  }
+
+  .footer {
+      flex-direction: column-reverse;
+  }
+
+  .footer p {
+      margin-top: 2rem;
+      text-align: center;
+  }
+}
+
+@media (max-width: 371px) {
+  .home {
+      justify-content: center;
+  }
+
+  .home-content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .home-content h1 {
+      font-size: 5rem;
+  }
+}

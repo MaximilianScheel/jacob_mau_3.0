@@ -39,6 +39,9 @@ body {
   background-color: rgba(171, 160, 146, 0.15)!important;
 }
 
+.accordion {
+  border-color: #9eca65;
+}
 
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";

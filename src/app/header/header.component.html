@@ -1,1 +1,55 @@
-<p>header works!</p>
+<div class="header-wrapper">
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="././assets/logo_white_3.png" />
+      <span class="animate" style="--i: 1"></span>
+    </a>
+
+    <div class="bx bx-menu" id="menu-icon" (click)="handleMenuToggle()">
+      <span class="animate" style="--i: 2"></span>
+    </div>
+    <div class="navbar">
+
+        <a
+            href="#home"
+            [class.active]="activeSectionId === 'home'"
+            (click)="handleNavLinkClick($event)"
+            >aktuell</a
+        >
+
+
+        <a
+          href="#architecture"
+          [class.active]="activeSectionId === 'architecture'"
+          (click)="handleNavLinkClick($event)"
+          >architektur</a
+        >
+
+        <a
+          href="#energy-consulting"
+          [class.active]="activeSectionId === 'energy-consulting'"
+          (click)="handleNavLinkClick($event)"
+          >energieberatung</a
+        >
+
+
+        <a
+          href="#profile"
+          [class.active]="activeSectionId === 'profile'"
+          (click)="handleNavLinkClick($event)"
+          >profil</a
+        >
+
+
+        <a
+          href="#contact"
+          [class.active]="activeSectionId === 'contact'"
+          (click)="handleNavLinkClick($event)"
+          >kontakt</a
+        >
+
+      <span class="active-nav"></span>
+      <span class="animate" style="--i: 2"></span>
+    </div>
+  </header>
+</div>
