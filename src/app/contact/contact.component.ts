@@ -65,7 +65,7 @@ export class ContactComponent {
     formData.append('email', emailField.value);
     formData.append('emailSubject', emailSubjectField.value);
 
-    await fetch('https://www.jacobmau.de/send_mail/send_mail.php', {
+    await fetch('https://formspree.io/f/moqgvqpj', {
       method: 'POST',
       body: formData,
     });
