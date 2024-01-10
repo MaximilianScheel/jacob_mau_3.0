@@ -15,6 +15,7 @@ export class CarouselComponent {
   slides = [
     { img: "/assets/BER_AKTUELLES_1.jpeg", caption: "Beschreibung 1" },
     { img: "/assets/BER_AKTUELLES_2.jpeg", caption: "Beschreibung 2" },
+    { img: "/assets/BER_AKTUELLES_3.jpeg", caption: "Beschreibung 2" }
   ];
 
   slideConfig = {

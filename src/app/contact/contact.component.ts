@@ -1,12 +1,15 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [
-    
+    ReactiveFormsModule,
+    NgIf,
+    NgFor,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'

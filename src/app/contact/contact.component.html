@@ -1,7 +1,7 @@
 <!-- contact section design -->
 <section class="contact" data-aos="fade-up" id="contact">
   <div class="logo-wrapper">
-    <img src="././assets/logo_black_footer.png" alt="" />
+    <img src="././assets/logo_black.png" alt="" />
     <span class="company-description">kontakt</span>
   </div>
 
@@ -9,7 +9,7 @@
     <div class="line"></div>
   </div>
 
-<form (ngSubmit)="sendMail()" #myForm>
+<form [formGroup]="registerForm" (ngSubmit)="sendMail()" #myForm>
   <div class="input-box">
     <div class="input-field">
       <input type="text" class="input"  #nameField placeholder="vor- und nachname" formControlName="name" required [class.invalid]="
@@ -63,7 +63,7 @@
     <span class="focus"></span>
 
   </div>
-  <div>
+  <div style="margin-top:-2rem">
       <span *ngIf="
       registerForm.get('message')?.hasError('required') &&
       (registerForm.get('message')?.dirty ||

@@ -36,7 +36,7 @@ html {
 
 body {
   color: var(--text-color);
-  background-color: rgba(171, 160, 146, 0.15)!important;
+  background-color: rgba(171, 160, 146, 0.15) !important;
 }
 
 .accordion {
@@ -49,15 +49,6 @@ body {
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 
-
-
-
-
-
-
-
-
-
 .slick-prev:before,
 .slick-next:before {
   color: #000;
@@ -67,8 +58,37 @@ body {
 .img-style {
   margin-left: auto;
   margin-right: auto;
-  width: 75rem;
+  max-width: 85rem;
+  width: 100%;
 }
 
+.slide {
+  position: relative;
 
+  .slide-img {
+    width: 100%; // Fülle die Breite des Elternelements aus
+    height: auto; // Behalte das Seitenverhältnis bei
 
+    &:hover + p {
+      opacity: 0; // Zeige die Beschriftung bei Hover an
+    }
+  }
+
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.7
+    ); // Hintergrundfarbe für die Beschriftung
+    color: white; // Textfarbe für die Beschriftung
+    opacity: 1; // Standardmäßig unsichtbar
+    transition: opacity 0.3s ease; // Füge eine Transition hinzu, um die Beschriftung sanft einzublenden
+  }
+}
