@@ -13,9 +13,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export class CarouselComponent {
 
   slides = [
-    { img: "/assets/BER_AKTUELLES_1.jpeg", caption: "Beschreibung 1" },
-    { img: "/assets/BER_AKTUELLES_2.jpeg", caption: "Beschreibung 2" },
-    { img: "/assets/BER_AKTUELLES_3.jpeg", caption: "Beschreibung 2" }
+    { img: "/assets/BER_123.jpg", caption: "Beschreibung 1" },
+    { img: "/assets/BER_234.jpg", caption: "Beschreibung 2" },
+    { img: "/assets/BER_345.jpg", caption: "Beschreibung 2" },
   ];
 
   slideConfig = {
@@ -33,7 +33,7 @@ export class CarouselComponent {
           "slidesToShow": 1,
           "slidesToScroll": 1,
           "infinite": true,
-          "dots": true
+          "dots": false
         }
       },
       {

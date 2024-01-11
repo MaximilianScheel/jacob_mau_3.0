@@ -1,7 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { HttpClient, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,19 +10,23 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
     ReactiveFormsModule,
     NgIf,
     NgFor,
+    HttpClientModule,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  registerForm = this.fb.group({
-    name: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]], // Email-Validator hinzufügen
-    message: ['', Validators.required],
-    emailSubject: ['', Validators.required],
-  });
+  registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.registerForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+      emailSubject: ['', Validators.required],
+    });
+  }
 
   isSubmitted = false;
   messageSent: boolean = false;
@@ -34,8 +38,11 @@ export class ContactComponent {
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('emailSubjectField') emailSubjectField!: ElementRef;
 
-  async sendMail() {
-    //action="https://maximilian-scheel.developerakademie.net/send_mail/send_mail.php"
+
+
+  sendMail() {
+    const formValues = this.registerForm.value;
+
     let nameField = this.nameField.nativeElement;
     let messageField = this.messageField.nativeElement;
     let emailField = this.emailField.nativeElement;
@@ -57,6 +64,7 @@ export class ContactComponent {
     emailSubjectField.disabled = true;
     sendButton.disabled = true;
 
+
     //Animation
 
     let formData = new FormData(this.myForm.nativeElement);
@@ -65,10 +73,21 @@ export class ContactComponent {
     formData.append('email', emailField.value);
     formData.append('emailSubject', emailSubjectField.value);
 
-    await fetch('https://formspree.io/f/moqgvqpj', {
-      method: 'POST',
-      body: formData,
-    });
+
+    this.http.post('https://formspree.io/f/moqgvqpj', formValues).subscribe(
+      response => {
+        console.log('Form submitted successfully:', response);
+        // Hier können Sie eine Erfolgsmeldung anzeigen oder den Benutzer umleiten, etc.
+      },
+      error => {
+        console.error('Error submitting form:', error);
+        // Hier können Sie die Fehlerantwort analysieren und geeignete Maßnahmen ergreifen
+        if (error instanceof HttpErrorResponse) {
+          console.log('Error status:', error.status);
+          console.log('Error body:', error.error);
+        }
+      }
+    );
 
     this.messageSent = true;
 
@@ -76,8 +95,6 @@ export class ContactComponent {
     messageField.value = '';
     emailField.value = '';
     emailSubjectField.value = '';
-
-    // Nachricht gesendet
 
     setTimeout(() => {
       this.messageSent = false;

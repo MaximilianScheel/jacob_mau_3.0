@@ -1,6 +1,6 @@
 section {
   min-height: 100vh;
-  padding: 13rem 9% 2rem;
+  padding: 13rem 15% 2rem;
   font-size: 1.7rem;
   color: black;
   line-height: 2;
@@ -13,6 +13,10 @@ section {
   span {
     font-size: 2rem;
   }
+}
+
+span {
+  line-height: 12rem;
 }
 
 .logo-wrapper {
@@ -58,6 +62,10 @@ section {
     width: 75rem;
 
   }
+}
+
+.accordion-wrapper-one{
+  padding-top: 6rem;
 }
 
 .text-wrapper, .text-wrapper-two, .text-wrapper-three {
