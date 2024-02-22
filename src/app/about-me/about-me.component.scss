@@ -1,5 +1,5 @@
 section {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 13rem 9% 2rem;
   color: black;
 }
@@ -9,6 +9,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 5rem;
 
   img {
     width: 100px;

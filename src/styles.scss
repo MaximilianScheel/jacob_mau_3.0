@@ -62,35 +62,22 @@ body {
 .img-style {
   margin-left: auto;
   margin-right: auto;
+  object-fit: cover;
+  width: 100%;
+  max-width: 120rem;
 }
 
 .slide {
   position: relative;
+  overflow: hidden; /* Füge dies hinzu, um das Bild innerhalb seines Containers zu begrenzen */
 
-  .slide-img {
-    width: 100%; // Fülle die Breite des Elternelements aus
-    height: auto; // Behalte das Seitenverhältnis bei
-
-    &:hover + p {
-      opacity: 0; // Zeige die Beschriftung bei Hover an
+    .slide-img {
+      width: 100%;
+      height: auto;
+      display: block; /* Füge dies hinzu, um mögliche Inline-Elementeigenschaften zu überschreiben */
+      margin: 0 auto; /* Zentriere das Bild innerhalb seines Containers */
     }
   }
 
-  p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    margin: 0;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.7
-    ); // Hintergrundfarbe für die Beschriftung
-    color: white; // Textfarbe für die Beschriftung
-    opacity: 1; // Standardmäßig unsichtbar
-    transition: opacity 0.3s ease; // Füge eine Transition hinzu, um die Beschriftung sanft einzublenden
-  }
-}
+
+

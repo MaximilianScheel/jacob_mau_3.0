@@ -20,7 +20,7 @@
       <span class="focus"></span>
       <span
         *ngIf="registerForm.get('name')?.hasError('required') && (registerForm.get('name')?.dirty || registerForm.get('name')?.touched || isSubmitted)"
-        class="error">This field is required.</span>
+        class="error">bitte namen eintragen</span>
     </div>
     <div class="input-field">
       <input type="text" class="input" #emailField placeholder="e-mail" formControlName="email" required [class.invalid]="
@@ -31,10 +31,10 @@
       <span class="focus"></span>
       <span
         *ngIf="registerForm.get('email')?.hasError('required') && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched || isSubmitted)"
-        class="error">This field is required.</span>
+        class="error">bitte gültige mail-adresse eintragen</span>
       <span
         *ngIf="registerForm.get('email')?.hasError('email') && !registerForm.get('email')?.hasError('required') && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched || isSubmitted)"
-        class="error">Invalid email address.</span>
+        class="error">ungültige mail-adresse</span>
     </div>
   </div>
 
@@ -49,13 +49,13 @@
       <span class="focus"></span>
       <span
         *ngIf="registerForm.get('emailSubject')?.hasError('required') && (registerForm.get('emailSubject')?.dirty || registerForm.get('emailSubject')?.touched || isSubmitted)"
-        class="error">This field is required.</span>
+        class="error">bitte fachrichtung eintragen</span>
     </div>
   </div>
 
 
   <div class="textarea-field">
-    <textarea class="input"  #messageField placeholder="nachricht" formControlName="message" rows="10" required [class.invalid]="
+    <textarea class="input"  #messageField placeholder="projektbeschreibung" formControlName="message" rows="10" required [class.invalid]="
         registerForm.get('message')?.invalid &&
         (registerForm.get('message')?.dirty ||
         registerForm.get('message')?.touched ||
@@ -69,7 +69,7 @@
       (registerForm.get('message')?.dirty ||
         registerForm.get('message')?.touched ||
         isSubmitted)
-    " class="error">This field is required.</span>
+    " class="error">bitte kurze projektbeschreibung eintragen</span>
     </div>
 
   <div class="btn-box btns">
