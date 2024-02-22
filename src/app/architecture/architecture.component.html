@@ -41,18 +41,19 @@
           <div ngbAccordionBody>
             <ng-template>
               <ul>
-                <p>LPH1 &nbsp; &nbsp; Grundlagenermittlung</p>
-                <p>LPH2 &nbsp; &nbsp; Vorplanung</p>
-                <p>LPH3 &nbsp; &nbsp; Entwurfsplanung</p>
-                <p>LPH4 &nbsp; &nbsp; Genehmigungsplanung</p>
-                <p>LPH5 &nbsp; &nbsp; Ausführungsplanung</p>
-                <p>LPH6 &nbsp; &nbsp; Vorbereitung der Vergabe</p>
-                <p>LPH7 &nbsp; &nbsp; Mitwirkung bei der Vergabe</p>
-                <p>
-                  LPH8 &nbsp; Objektüberwachung – Bauüberwachung und
-                  Dokumentation
-                </p>
-                <p>LPH9 &nbsp; Objektbetreuung</p>
+                <div>
+                  <li>LPH1 Grundlagenermittlung</li>
+                  <li>LPH2 Vorplanung</li>
+                  <li>LPH3 Entwurfsplanung</li>
+                  <li>LPH4 Genehmigungsplanung</li>
+                  <li>LPH5 Ausführungsplanung</li>
+                  <li>LPH6 Vorbereitung der Vergabe</li>
+                  <li>LPH7 Mitwirkung bei der Vergabe</li>
+                  <li>
+                    LPH8 Objektüberwachung – Bauüberwachung und Dokumentation
+                  </li>
+                  <li>LPH9 Objektbetreuung</li>
+                </div>
               </ul>
             </ng-template>
           </div>
@@ -77,8 +78,16 @@
               <div ngbAccordionCollapse>
                 <div ngbAccordionBody>
                   <ng-template>
-                    · Umbau & Erweiterung einer Doppelhaushälfte, Stralsund, derzeit lp 2 <br>
-                    · Energieberatung für Wohngebäude in berlin, brandenburg und mecklenburg vorpommern
+                    <ul>
+                      <li>
+                        Umbau & Erweiterung einer Doppelhaushälfte, Stralsund,
+                        derzeit lp 2
+                      </li>
+                      <li>
+                        Energieberatung für Wohngebäude in berlin, brandenburg
+                        und mecklenburg vorpommern
+                      </li>
+                    </ul>
                   </ng-template>
                 </div>
               </div>
@@ -86,71 +95,88 @@
           </div>
         </div>
 
-          <div class="accordion-wrapper-item">
-            <div ngbAccordion>
-              <div ngbAccordionItem>
-                <h2 ngbAccordionHeader>
-                  <button ngbAccordionButton style="font-size: 1.7rem">
-                    2023
-                  </button>
-                </h2>
-                <div ngbAccordionCollapse>
-                  <div ngbAccordionBody>
-                    <ng-template>
-                      · umbau einer scheune in schiaß, lph 5-7 <br />
-                      · umbau eines ferienhauses, lph 1-4 <br />
-                      · neubau von 2 doppelhäusern in Ahrensfelde, lph 5 <br />
-                    </ng-template>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-wrapper-item">
-            <div ngbAccordion>
-              <div ngbAccordionItem>
-                <h2 ngbAccordionHeader>
-                  <button ngbAccordionButton style="font-size: 1.7rem">
-                    2022
-                  </button>
-                </h2>
-                <div ngbAccordionCollapse>
-                  <div ngbAccordionBody>
-                    <ng-template>
-                      · umnutzung einer bäckerei in berlin, lph 4 <br />
-                      · umbau des dachgeschosses im denkmal, lph 5 <br />
-                      · umbau einer scheune in letschin, lph 1-4 (derzeit lph 2)
-                      <br />
-                      · denkmalgerechte detailplanung einer fassade in staaken
-                      <br />
-                    </ng-template>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-wrapper-item">
-            <div ngbAccordion>
-              <div ngbAccordionItem>
-                <h2 ngbAccordionHeader>
-                  <button ngbAccordionButton style="font-size: 1.7rem">
-                    2021
-                  </button>
-                </h2>
-                <div ngbAccordionCollapse>
-                  <div ngbAccordionBody>
-                    <ng-template>
-                      · neubau eines wohnhauses in stralsund, lph 1-7 (derzeit lph 5 & 6) <br>
-                      · denkmalgerechte erweiterung eines ackerbürgerhauses in stralsund, bis lph 3 <br>
-                      · erweiterung einer doppelhaushälfte in stralsund, bis lph 3 <br>
-                    </ng-template>
-                  </div>
+        <div class="accordion-wrapper-item">
+          <div ngbAccordion>
+            <div ngbAccordionItem>
+              <h2 ngbAccordionHeader>
+                <button ngbAccordionButton style="font-size: 1.7rem">
+                  2023
+                </button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                  <ng-template>
+                    <ul>
+                      <li>Umbau einer Scheune in Schiaß, LPH 5-7</li>
+                      <li>Umbau eines Ferienhauses, LPH 1-4</li>
+                      <li>Neubau von 2 Doppelhäusern in Ahrensfelde, LPH 5</li>
+                    </ul>
+                  </ng-template>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="accordion-wrapper-item">
+          <div ngbAccordion>
+            <div ngbAccordionItem>
+              <h2 ngbAccordionHeader>
+                <button ngbAccordionButton style="font-size: 1.7rem">
+                  2022
+                </button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                  <ng-template>
+                    <ul>
+                      <li>Umnutzung einer Bäckerei in Berlin, LPH 4</li>
+                      <li>Umbau des Dachgeschosses im Denkmal, LPH 5</li>
+                      <li>
+                        Umbau einer Scheune in Letschin, LPH 1-4 (derzeit LPH 2)
+                      </li>
+                      <li>
+                        Denkmalgerechte Detailplanung einer Fassade in Staaken
+                      </li>
+                    </ul>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-wrapper-item">
+          <div ngbAccordion>
+            <div ngbAccordionItem>
+              <h2 ngbAccordionHeader>
+                <button ngbAccordionButton style="font-size: 1.7rem">
+                  2021
+                </button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                  <ng-template>
+                    <ul>
+                      <li>
+                        Neubau eines Wohnhauses in Stralsund, LPH 1-7 (derzeit
+                        LPH 5 & 6)
+                      </li>
+                      <li>
+                        Denkmalgerechte Erweiterung eines Ackerbürgerhauses in
+                        Stralsund, bis LPH 3
+                      </li>
+                      <li>
+                        Erweiterung einer Doppelhaushälfte in Stralsund, bis LPH
+                        3
+                      </li>
+                    </ul>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

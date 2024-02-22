@@ -16,8 +16,6 @@ export class CarouselComponent {
     { img: "/assets/BER_123.jpg", caption: "Beschreibung 1" },
     { img: "/assets/BER_234.jpg", caption: "Beschreibung 2" },
     { img: "/assets/BER_345.jpg", caption: "Beschreibung 2" },
-    { img: "/assets/BER_AKTUELLES_3.jpeg", caption: "Beschreibung 2" }
-
 
   ];
 
@@ -26,7 +24,7 @@ export class CarouselComponent {
     "slidesToScroll": 1,
     "dots": false,
     "infinite": true,
-    "autoplay": false,
+    "autoplay": true,
     "autoplaySpeed": 3000,
     "arrows": false,
     "responsive": [

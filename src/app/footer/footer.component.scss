@@ -6,8 +6,14 @@
   padding: 2rem 9%;
   background-color: white;
   border: 2px solid black;
+  position: relative; /* Füge dies hinzu, um die Position für das relative Positionieren des Kindelements festzulegen */
+}
 
-  // background: var(--second-bg-color);
+.data-protect {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer-text,
