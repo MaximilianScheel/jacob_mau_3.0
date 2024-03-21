@@ -9,22 +9,22 @@
       <span class="animate" style="--i: 2"></span>
     </div>
     <nav class="navbar">
-
+      <div>
         <a
             href="#home"
             [class.active]="activeSectionId === 'home'"
             (click)="handleNavLinkClick($event)"
             >aktuell</a
         >
-
-
+      </div>
+      <div class="what">
         <a
           href="#architecture"
           [class.active]="activeSectionId === 'architecture'"
           (click)="handleNavLinkClick($event)"
           >architektur</a
         >
-
+      </div>
         <a
           href="#energy-consulting"
           [class.active]="activeSectionId === 'energy-consulting'"

@@ -96,6 +96,16 @@ td {
 }
 
 .accordion-wrapper {
+  ngb-accordion {
+    ngb-accordion-item {
+      h2[ngbAccordionHeader] {
+        button[ngbAccordionButton] {
+          border: 1px solid green !important; /* Setze die gewünschte Border-Farbe */
+        }
+      }
+    }
+  }
+
   font-size: 22px;
   padding: 6rem 9% 2rem;
   display: flex;
@@ -159,3 +169,10 @@ td {
     box-sizing: border-box;
   }
 }
+
+.accordion-button:not(.collapsed) {
+  color: black!important;
+  /* background-color: var(--bs-accordion-active-bg); */
+  background-color: #9eca65;
+}
+
